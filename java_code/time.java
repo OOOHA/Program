@@ -5,11 +5,11 @@ import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-public class calendar 
-{
-    public static void main(String[] args) 
+
+public class time {
+
+    public static void main(String args[])
     {
-        
         Calendar calendar = Calendar.getInstance();
         Date time = calendar.getTime();
         System.out.println(time);
@@ -43,4 +43,5 @@ public class calendar
         String sdfstr2 = sdf2.format(time);
         System.out.println(sdfstr2);
     }
+    
 }

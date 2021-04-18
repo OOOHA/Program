@@ -25,9 +25,9 @@ public class CarCar extends Car
 
 
         System.out.print("Please enter the 1st car's acceleration:");
-        float speedfor1 = sc.nextFloat();;// 1st car's acceleration
+        float speedfor1 = sc.nextFloat();// 1st car's acceleration
         System.out.print(WANT);
-        float timesfor1 = sc.nextFloat();;
+        float timesfor1 = sc.nextFloat();
         System.out.println(LINE1);
 
         System.out.println("The 1st car speed is now:" + car1.speedChange(speedfor1 * timesfor1));
