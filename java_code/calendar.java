@@ -9,7 +9,6 @@ public class calendar
 {
     public static void main(String[] args) 
     {
-        
         Calendar calendar = Calendar.getInstance();
         Date time = calendar.getTime();
         System.out.println(time);
