@@ -15,7 +15,7 @@ public class calendar
         System.out.println(time);
         
         int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH)+1;//0開始數
+        int month = calendar.get(Calendar.MONTH) + 1;//count from 0
         int date = calendar.get(Calendar.DATE);
         
         System.out.println(year+"/"+month+"/"+date);
