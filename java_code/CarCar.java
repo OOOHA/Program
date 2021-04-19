@@ -11,15 +11,15 @@ public class CarCar extends Car
         Scanner sc = new Scanner(System.in);
 
         Car car1 = new Car();//define 1st car and call
-        car1.carInfo1(12345, "Blue");
+        car1.carInfo("1st car info:", 12345, "Blue");
         System.out.println(LINE2);
 
         Car car2 = new Car();//define 2nd car and call
-        car2.carInfo2(23456, "Red");
+        car2.carInfo("2nd car info:", 23456, "Red");
         System.out.println(LINE2);
 
         Car car3 = new Car();//define 3rd car and call
-        car3.carInfo3(34567, "Green");
+        car3.carInfo("3rd car info:", 34567, "Green");
         System.out.println(LINE2);
 
 

@@ -11,32 +11,12 @@ public class Car
     public static final String SHOWNUMBER = "car number:";//java rule S1192
     public static final String SHOWCOLOR = "car color:";//java rule S1192
 
-    public void carInfo1(int number, String color)//1st car method
+    public void carInfo(String sequence, int number, String color)//1st car method
     {
         this.carNumber = number;
         this.carColor = color;
 
-        System.out.println("1st Car");
-        System.out.println(SHOWNUMBER + carNumber);
-        System.out.println(SHOWCOLOR + carColor);
-    }
-
-    public void carInfo2(int number, String color)//2nd car method
-    {
-        this.carNumber = number;
-        this.carColor = color;
-
-        System.out.println("2nd Car");
-        System.out.println(SHOWNUMBER + carNumber);
-        System.out.println(SHOWCOLOR + carColor);
-    }
-
-    public void carInfo3(int number, String color)//3rd car method
-    {
-        this.carNumber = number;
-        this.carColor = color;
-
-        System.out.println("3rd Car");
+        System.out.println(sequence);
         System.out.println(SHOWNUMBER + carNumber);
         System.out.println(SHOWCOLOR + carColor);
     }
