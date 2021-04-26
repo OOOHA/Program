@@ -48,7 +48,12 @@ public class school
             str = "x is false";
             System.out.println(str);
         }
-
+        if(x = true)
+        {
+            str = "x is a big true";
+            System.out.println(str);
+        
+        }    
         int a2 = 8;
         int b3 = 3;
         int max;
