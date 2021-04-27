@@ -8,6 +8,10 @@ public class school
         a = a + 10;
         System.out.println(a);
 
+        String a12 = "123";
+        a12 += 10;
+        System.out.println(a12);
+
         int ii = java.lang.Integer.MAX_VALUE;
         int sum;
         System.out.println(ii);
