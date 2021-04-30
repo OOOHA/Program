@@ -1,4 +1,4 @@
-package java_code;
+package Code;
 
 public class Ch1_1 {
     public static void main(String[] args) {

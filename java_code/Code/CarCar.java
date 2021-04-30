@@ -1,4 +1,4 @@
-package java_code;
+package Code;
 import java.util.Scanner;
 
 public class CarCar extends Car

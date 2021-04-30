@@ -1,4 +1,4 @@
-package java_code;
+package Code;
 
 public class OO extends Object_Oriented
 {
