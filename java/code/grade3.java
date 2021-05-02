@@ -1,4 +1,4 @@
-package Code;
+package code;
 import java.util.Scanner;
 
 public class grade3 
