@@ -1,0 +1,10 @@
+progress[value]::-webkit-progress-value::before {
+    content: '80%';
+    position: absolute;
+    right: 0;
+    top: -125%;
+  }
+
+  p {
+    color: red;
+  }
