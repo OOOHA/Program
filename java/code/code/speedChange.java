@@ -2,11 +2,11 @@ package code;
 
 public class speedChange 
 {
-    float speed = 0;
-    int carNumber;
-    float acceleration;
-    float deceleration;
-    String carColor; 
+    private float speed = 0;
+    private int carNumber;
+    private float acceleration;
+    private float deceleration;
+    private String carColor; 
 
     public static final String SHOWNUMBER = "car number:";//java rule S1192
     public static final String SHOWCOLOR = "car color:";//java rule S1192
