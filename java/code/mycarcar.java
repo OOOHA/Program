@@ -1,7 +1,7 @@
 package code;
 import java.util.Scanner;
 
-public class mycarcar// extends speedChange
+public class mycarcar
 {
     public static final String WANT = "How many times would you want:";//java rule S1192
     public static final String LINE1 = "--------------------------------------------";//java rule S1192
@@ -10,18 +10,23 @@ public class mycarcar// extends speedChange
     {
         Scanner sc = new Scanner(System.in);
 
-        Car car1 = new Car();//define 1st car and call
+        littlecarcar car1 = new littlecarcar();//define 1st car and call
         car1.carInfo("1st car info:", 12345, "Blue");
+        car1.show_count();
         System.out.println(LINE2);
+        
 
-        Car car2 = new Car();//define 2nd car and call
+        littlecarcar car2 = new littlecarcar();//define 2nd car and call
         car2.carInfo("2nd car info:", 23456, "Red");
+        car2.show_count();
         System.out.println(LINE2);
+        
 
-        Car car3 = new Car();//define 3rd car and call
+        littlecarcar car3 = new littlecarcar();//define 3rd car and call
         car3.carInfo("3rd car info:", 34567, "Green");
+        car3.show_count();
         System.out.println(LINE2);
-
+        
 
 
         System.out.print("Please enter the 1st car's acceleration:");
@@ -91,20 +96,36 @@ class littlecarcar
     private int carNumber;
     private float acceleration;
     private float deceleration;
-    private String carColor; 
+    private String carColor;
+    private static int count; 
 
     public static final String SHOWNUMBER = "car number:";//java rule S1192
     public static final String SHOWCOLOR = "car color:";//java rule S1192
 
-    //constructor
+    //constructor overloading
     public littlecarcar(int carNumber, float acceleration, float deceleration, String carColor)
     {
         this.carNumber = carNumber;
         this.acceleration = acceleration;
         this.deceleration = deceleration;
         this.carColor = carColor;
+        
+    }
+    public littlecarcar()
+    {
+        this(123);
+        count++;//count the times of object created
+    }
+    public littlecarcar(int one)
+    {
+        this(123, 10, 1, "Dic");
     }
 
+    public void show_count()//print the times of object created
+    {
+        System.out.println(count + " time(s) of object created");
+    }
+    
     public void carInfo(String sequence, int number, String color)//1st car method
     {
         this.carNumber = number;
