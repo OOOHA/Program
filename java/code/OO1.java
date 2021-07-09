@@ -17,14 +17,14 @@ public class OO1
         OO chicken2 = new OO("Henry", "Big dick");
         OO chicken3 = new OO();
 
-        System.out.printf("chicken1 - name %s, dick %s  \n", chicken1.getName(), chicken1.getCrest());
-        chicken1.wu();
+        System.out.printf("chicken1 - name: %s, dick: %s  \n", chicken1.getName(), chicken1.getDick());
+        chicken1.sperm();
 
-        System.out.printf("chicken2 - name %s, dick %s  \n", chicken2.getName(), chicken2.getCrest());
-        chicken2.wu();
+        System.out.printf("chicken2 - name: %s, dick: %s  \n", chicken2.getName(), chicken2.getDick());
+        chicken2.sperm();
 
-        System.out.printf("chicken2 - name %s, dick %s  \n", chicken3.getName(), chicken3.getCrest());
-        chicken3.wu();
+        System.out.printf("chicken2 - name: %s, dick: %s  \n", chicken3.getName(), chicken3.getDick());
+        chicken3.sperm();
 
         sc.close();
     }

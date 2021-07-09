@@ -2,31 +2,30 @@ package code;
 
 public class OO extends Object_Oriented
 {
-    private String crest;
+    private String dick;
 
     public OO()
     {
         super();
     }
-
-    public OO(String name, String crest)
+    public OO(String name, String dick)
     {
         super(name);
-        this.crest = crest;
+        this.dick = dick;
     }
     
-    public void setCrest(String crest)
+    public void setDick(String dick)
     {
-        this.crest = crest;
+        this.dick = dick;
     }
 
-    public String getCrest()
+    public String getDick()
     {
-        return crest;
+        return dick;
     }
 
-    public void wu()
+    public void sperm()
     {
-        System.out.println("Co CO Co.....");
+        System.out.println("DA DA DA DA DA..... You are pregnant!");
     }
 }
