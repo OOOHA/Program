@@ -1,4 +1,7 @@
 from turtle import *
+
+setposition(0,200)
+
 color('green')
 bgcolor('black')
 speed(15)
