@@ -26,7 +26,7 @@ player1 = Entity(
     collider = 'box'
 )
 
-player2 = deplicate(player1, y = 1.4)
+player2 = duplicate(player1, y = 1.4)
 
 speed_x = speed_y = 0.1
 
