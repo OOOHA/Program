@@ -7,7 +7,7 @@ import time
 import login
 #from PIL import Image
 
-driver = webdriver.Safari()
+driver = webdriver.Chrome()
 driver.get("https://www.ais.tku.edu.tw/EleCos/login.aspx?ReturnUrl=%2felecos%2f")
 
 ID = driver.find_element_by_name("txtStuNo")
