@@ -10,17 +10,10 @@ public class palindrome {
         d = c.reverse().toString();
 
         boolean result = false;
-
-        if(x < 0)
-        {
-            result = false;
-        }
-
         if(d.equals(s))
         {
             result = true;
         }
-        
         
         System.out.println(result);
     }

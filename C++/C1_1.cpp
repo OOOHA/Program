@@ -149,19 +149,6 @@ int main(){
     cout<<"n1<=n2="<<(n1<=n2)<<noboolalpha<<endl;
     cout<<"n1!=n2="<<(n1!=n2)<<endl;
 
-    /*練習
-    宣告二個變數,值分別為5與10並進行二數交換,輸出交換前後的內容 
-    */ 
-    int n3=5,n4=10,temp;
-    cout<<"交換前:n3="<<n3<<",n4="<<n4<<endl;
-    temp=n3;
-    n3=n4;
-    n4=temp;
-    cout<<"交換後:n3="<<n3<<",n4="<<n4<<endl;
-    n3+=n4;//n3=n3+n4   n3=10+5=15
-    n4=n3-n4;//n4=15-5=10
-    n3=n3-n4;//n3=15-10=5
-    cout<<"第二次交換:n3="<<n3<<",n4="<<n4<<endl;
 
     return 0;
 }
