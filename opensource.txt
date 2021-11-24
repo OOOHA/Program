@@ -1,0 +1,25 @@
+P.115 3 4章下次段考會考
+
+find /usr/foo -name "*.c"
+    (絕對路徑) (檔案名) (副檔名)
+
+find /usr/foo -name "*.c" > list
+存檔
+
+find /usr/foo -name "s*.c"
+找出s開頭副檔名為c
+
+find /usr/foo -name "s*.c" -exec grep -nH 'main' {} \;
+                        (給下一個命令執行)  (找檔案裡面有沒有main這個字在裡面)
+
+find /usr/foo -name "s*.c" -exec grep -nH -w 'main' {} \;
+                                         (只要找main這個字)
+
+find /usr/foo -name "s*.c" -exec cp {} . \;
+把找到的檔案全部貼到現在工作的目錄
+
+tar -cf FILE.tar *.h
+打包
+
+tar -xf ../FILE.tar
+解開
