@@ -16,7 +16,7 @@ void add_node(Node **start, long long account_number_value, bool account_type_va
 void print_list(Node *node);
 void insert_node(Node **start, long long account_number_value, bool account_type_value, long long money_value);
 void delete_node(Node **start, long long account_number_value);
-void sort_node(Node** head_ref);
+void sort_node(Node **head_ref);
 void find_node(Node **start,long long account_number_value);
 void free_list(Node *node);
 
