@@ -8,9 +8,11 @@ void display(char, int);
 int main()
 {
     char* p[3];
-    char str[][5] = {
-        {"abc","def","ghi"},
-        {"jkl","mno","pqr"}
+    char str[][5] =
+    {
+        {"1","2","3"},
+        {"4","5","6"},
+        {"7","8","9"}
     };
     p[0] = &str[0][0];
     p[1] = str[1];
