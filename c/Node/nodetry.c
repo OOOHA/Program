@@ -12,12 +12,16 @@ typedef struct node
 	struct node *prev;
 }Node;
 
+struct Node *head = NULL;
+struct Node *end = NULL;
+struct Node *current = NULL;
+
 void add_node(Node **start, long long account_number_value, bool account_type_value, long long money_value);
 void print_list(Node *node);
 void insert_node(Node **start, long long account_number_value, bool account_type_value, long long money_value);
 void delete_node(Node **start, long long account_number_value);
-void sort_node(Node **head_ref);
-void find_node(Node **start,long long account_number_value);
+void sort_node(Node *start);
+int find_node(Node **start,long long account_number_value);
 void free_list(Node *node);
 
 int main(int argc, char* argv[])
@@ -41,7 +45,7 @@ int main(int argc, char* argv[])
 	}
 	fclose(file_handle);
 	print_list(head);
-	printf("==============\n");
+	printf("==================================\n");
 
 	for (int i = 0; i < 3; i++)
 	{
@@ -50,7 +54,8 @@ int main(int argc, char* argv[])
 	}
 	fclose(file_handle1);
 	print_list(head);
-	printf("==============\n");
+	printf("==================================\n");
+
 	
     for (int i = 0; i < 2; i++)
 	{
@@ -91,7 +96,7 @@ void add_node(Node **start, long long account_number_value, bool account_type_va
 	}
 }
 
-void insert_node(Node **start, long long account_number_value, bool account_type_value, long long money_value)
+int insert_node(Node **start, long long account_number_value, bool account_type_value, long long money_value)
 {
 	struct node *temp= malloc(sizeof (struct node));
     temp->account_number_data = account_number_value;
@@ -137,7 +142,7 @@ void delete_node(Node **start, long long account_number_value)
 	}
 }
 
-void find_node(Node **start,long long account_number_value)
+int find_node(Node **start,long long account_number_value)
 {
 	Node* temp = *start;
     long long pos = 0;
@@ -158,34 +163,58 @@ void find_node(Node **start,long long account_number_value)
 	}
 }
 
-void sort_node(struct Node** head_ref)
+void sort_node(Node *start)
 {
-    // // Initialize 'sorted' - a sorted doubly linked list
-    // struct Node* sorted = NULL;
- 
-    // // Traverse the given doubly linked list and
-    // // insert every node to 'sorted'
-    // struct Node* current = *head_ref;
-    // while (current != NULL) {
- 
-    //     // Store next for next iteration
-    //     struct Node* next = current->next;
- 
-    //     // removing all the links so as to create 'current'
-    //     // as a new node for insertion
-    //     current->prev = current->next = NULL;
- 
-    //     // insert current in 'sorted' doubly linked list
-    //     sortedInsert(&sorted, current);
- 
-    //     // Update current
-    //     current = next;
-    // }
- 
-    // // Update head_ref to point to sorted doubly linked list
-    // *head_ref = sorted;
+	
+	//判空
+	if (start == NULL)
+	{
+		return;
+	}
+	//初始化辅助指针
+	prev= start->head;
+	Lnode *pCurrent = start->head;
+	// //循环次数
+	int num = start->length;
+	int i,j;
+	for (i = 1; i < num; i++)
+	{
+		//重置指针位置
+		pPre = start->head;
+		pCurrent = pPre->next;
+		for (j = 1; j <= num-i; j++)/*循环条件*/
+		{
+			if(pPre->data > pCurrent->data)
+			{
+				if (pCurrent->next == NULL) //节点尾节点情况
+				{
+					pPre->next = pCurrent->next;
+					pCurrent->prior = pPre->prior;
+					pCurrent->next = pPre;
+					pPre->prior->next = pCurrent;
+					pPre->prior = pCurrent;
+					break;
+				}
+				if (pPre->prior == NULL) //节点头节点情况
+				{
+					start->head = pCurrent;
+					//pPre与新前驱建⽴联系
+					/*pPre->prior->next = pCurrent;*/
+					pCurrent->prior = pPre->prior;
+					//pCurrent与新后驱建⽴联系
+					pCurrent->next->prior = pPre;
+					pPre->next = pCurrent->next;
+					//pPre与pCurrent互连
+					pPre->prior = pCurrent;
+					pCurrent->next = pPre;
+					//pCurrent指针后移到pPre前⾯
+					pCurrent = pPre->next;
+					continue;
+				}
+			}
+		}
+	}
 }
-
 void print_list(Node *node)
 {
 	while(node != NULL)

@@ -1,16 +1,18 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+//int a(int *x);
+
 int main()
 {
 	int y = 1;
 	
-	printf("%d",a(y));
+	printf("%d",tryFunction(y));
 	return 0;
- }
+}
 
- int a(int *x)
- {
-	 //printf("%d",x);
-	 return x;
- }
+int tryFunction(int *x)
+{
+	//printf("%d",x);
+	return x;
+}

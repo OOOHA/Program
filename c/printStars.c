@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 int main()
 {
 
@@ -46,7 +45,55 @@ int main()
         
         printf("\n");
     }
+
+    printf("\n");
+    printf("--------------------------------------\n");
+
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf(" ");
+        }
+        //printf("%d", i);
+        printf("*");
+
+        printf("\n");
+    }
     
+    printf("\n");
+    printf("--------------------------------------\n");
+    
+	for(int i = 0; i <= 4; i++)
+    {
+		for(int j = 0; j <= 4 - i; j++)
+        {
+	     	printf(" ");
+		}
+		for(int k = 0; k <= i * 2; k++)
+        {
+		  printf("*");
+          //printf("%d", i);
+		}
+		printf("\n");
+	}
+    
+    printf("\n");
+    printf("--------------------------------------\n");
+
+    for(int i = 0; i <= 4; i++)
+    {
+		for(int j = 0; j <= i; j++)
+        {
+			printf(" ");
+		}
+		for(int k = 0; k < 9 - i * 2; k++)
+        {
+		  printf("*");
+          //printf("%d", i);
+		}
+		printf("\n");
+    }
     
     
 	return 0;

@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <string.h>
 
+
 typedef struct node
 {
 	long long account_number_data;
@@ -10,44 +11,37 @@ typedef struct node
 	long long money_data;
 	struct node *next;
 	struct node *prev;
-} Node;
+}Node;
+
 
 void add_node(Node **start, long long account_number_value, bool account_type_value, long long money_value);
-void delete_node(Node **start, long long);
-void insert_node();
-void sortList();
 void print_list(Node *node);
 void free_list(Node *node);
+void sortList();
+//void sort(Node *node);
 struct node *head, *tail = NULL;
+
 
 int main(int argc, char* argv[])
 {
 	FILE *file_handle = fopen ("1.txt", "r");
-	FILE *file_handle1 = fopen ("2.txt", "r");
-	FILE *file_handle2 = fopen ("3.txt", "r");
-	FILE *file_handle3 = fopen ("4.txt", "r");
-	FILE *file_handle4 = fopen ("5.txt", "r");
+
 
 	// create first node "head"
 	Node *head = NULL;
+	//node *ptr;
 	long long account_number[10];
 	bool account_type[10];
 	long long money[10];
 
 	for (int i = 0; i < 10; i++)
 	{
+		//scanf("%d", &i);
+		//add_node(&head, i);
     	fscanf (file_handle, "%lld %d %lld", &account_number[i], &account_type[i], &money[i]);
-		add_node(&head, account_number[i], account_type[i], money[i]);
+		add_node(&head, account_number[i], &account_type[i], &money[i]);
 	}
 	fclose(file_handle);
-
-    for (int i = 0; i < 3; i++)
-	{
-    	fscanf (file_handle1, "%lld", &account_number[i]);
-		delete_node(&head, account_number[i]);
-	}
-	fclose(file_handle1);
-
 
 	sortList();
 
@@ -57,17 +51,17 @@ int main(int argc, char* argv[])
 	return 0;	
 }
 
-void add_node(Node **start, long long account_number_value, bool account_type_value, long long money_value)
+void add_node(Node **start, long long account_number_value,bool account_type_value, long long money_value)
+//bool account_type_value, long long money_value
 {
-
-	Node *new_node = (Node*)malloc(sizeof(Node));
+	//Node *new_node = (Node*)malloc(sizeof(Node));
+	struct Node* new_node = (struct Node*)malloc(sizeof(Node));
 
 	new_node->account_number_data = account_number_value;
-	new_node->account_type_data = account_type_value;
-	new_node->money_data = money_value;
-	new_node->next = NULL;
-	new_node->prev = NULL;
+	
 
+	//bool account_type_value, long long money_value	new_node->next = NULL;
+	
 	if(*start == NULL)
 	{
 		*start = new_node;
@@ -84,35 +78,6 @@ void add_node(Node **start, long long account_number_value, bool account_type_va
 		current->next = new_node;
 		return;
 	}
-}
-void delete_node(Node **start, long long account_nember_value)
-{
-	Node *current = *start;
-	Node *temp;
-
-	if(account_nember_value == current->account_number_data) {
-		*start = current->next;
-		(*start)->prev = NULL;
-		free(current);
-		return;
-	}
-	
-	while(current != NULL) {
-		if(current->next->account_number_data == account_nember_value) {
-			temp = current->next;
-			current->next = current->next->next;	
-			if(current->next != NULL)
-				current->next->prev = current;
-			free(temp);
-			return;
-		}
-		current = current->next;
-	}
-}
-
-void insert_node()
-{
-
 }
 
 void sortList()
@@ -144,9 +109,6 @@ void print_list(Node *node)
 	while(node != NULL)
 	{
 		printf("%lld ", node->account_number_data);
-		printf("%d ", node->account_type_data);
-		printf("%lld\n", node->money_data);
-
 		node = node->next;
 	}
 	printf("\n");

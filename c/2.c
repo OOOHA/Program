@@ -15,8 +15,6 @@ int main()
         {
             max = n;
         }
-        
-        
     } while (n != 5);
 
     

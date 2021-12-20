@@ -3,7 +3,7 @@
 #include <string.h>
 #include <sys/stat.h>
 
-int read()
+int main()
 {
     const char* filename = "1.txt";
 
