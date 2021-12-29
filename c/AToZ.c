@@ -3,7 +3,6 @@
 
 int main()
 {
-
 	for (char c = 'a'; c <= 'z'; c++)
 	{
 		printf("%c " ,c);
@@ -15,6 +14,8 @@ int main()
 	{
 		printf("%c " ,a);
 	}
+	
+	printf("\n");
 	
 	return 0;
 }

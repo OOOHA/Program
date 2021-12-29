@@ -4,8 +4,7 @@
 int main()
 {
     char a = 33;
-    printf("%c",a);
-
+    printf("%c\n",a);
 
     return 0;
 }
