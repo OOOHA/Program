@@ -9,7 +9,7 @@ int main()
     }
     printf("\n");
     
-    printf("Press enter:");//this csn make the code pause and continue after you press something
+    printf("Press enter:");//this can make the code pause and continue after you press something
     getchar();
 
     for (int i = 0; i < 10; i++)
