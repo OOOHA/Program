@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
 
     for (int i = 0; i <= 5; i++)
     {
@@ -11,7 +12,7 @@ int main(){
             cout << "*";
 
         }
-        cout <<endl;
+        cout << endl;
     }
     
     

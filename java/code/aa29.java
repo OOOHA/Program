@@ -8,7 +8,7 @@ public class aa29{
         int result = 0;
         if(x % 10 == 0)
         {
-            x = x / 10;  
+            x = x / 10;
         }
         if(x < 0)
             {
