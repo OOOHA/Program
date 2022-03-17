@@ -4,8 +4,8 @@ import cv2
 import time
 
 start = time.time()
-img = cv2.imread("C:/Users/henry/OneDrive/Programs/Program/Python/Image process/Lenna.bmp", -1)
-#img = cv2.imread("/Users/henry/OneDrive/Programs/Program/Python/Image process/Lenna.bmp", 0) # For my mac
+img = cv2.imread("C:/Users/henry/OneDrive/Programs/Program/Python/Image process/Margot-Robbie.jpg", -1)
+#img = cv2.imread("/Users/henry/OneDrive/Programs/Program/Python/Image process/Margot-Robbie.jpg", 0) # For my mac
 
 def image_quantization(img, bits):
     nr, nc = img.shape[:2]

@@ -2,8 +2,8 @@ import numpy as np
 from matplotlib import pyplot as plt 
 import cv2
 
-img = cv2.imread("C:/Users/henry/OneDrive/Programs/Program/Python/Image process/Monet.bmp", -1)
-#img = cv2.imread("/Users/henry/OneDrive/Programs/Program/Python/Image process/Lenna.bmp", 0) # For my mac
+img = cv2.imread("C:/Users/henry/OneDrive/Programs/Program/Python/Image process/jennifer-lawrence-gray.jpg", -1)
+#img = cv2.imread("/Users/henry/OneDrive/Programs/Program/Python/Image process/jennifer-lawrence-gray.jpg", 0) # For my mac
 
 nr, nc = img.shape[:2]
 x0 = nr // 2
