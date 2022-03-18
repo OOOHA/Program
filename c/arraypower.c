@@ -8,24 +8,24 @@ int main()
 {
 	int a1[3][3];//first matrix
 	int a2[3][3];//second matrix
-	int *m1[3] = {a1[0],a1[1],a1[2]};
-	int *m2[3] = {a2[0],a2[1],a2[2]};
+	int *m1[3] = {a1[0], a1[1], a1[2]};
+	int *m2[3] = {a2[0], a2[1], a2[2]};
 
 	printf("First 3X3 matrix:\n");
-	for(int i = 0;i < 3;i++)//First matrix intput
+	for(int i = 0; i < 3; i++)//First matrix intput
 	{
-		for(int j = 0;j < 3;j++)
+		for(int j = 0; j < 3; j++)
 		{
-			scanf("%d",&a1[i][j]);
+			scanf("%d", &a1[i][j]);
 		}
 	}
     
 	printf("Second 3X3 matrix:\n");
-	for(int x = 0;x < 3;x++)//second matrix intput
+	for(int x = 0; x < 3; x++)//second matrix intput
 	{
-		for(int y = 0;y < 3;y++)
+		for(int y = 0; y < 3; y++)
 		{
-			scanf("%d",&a2[x][y]);
+			scanf("%d", &a2[x][y]);
 		}
 	}
 
@@ -33,16 +33,14 @@ int main()
 
 	printf("The result of the multiplication of two matrices :\n");
 
-	for(int rows = 0;rows < 3;rows++)
+	for(int rows = 0; rows < 3; rows++)
 	{
-		for(int cols = 0;cols < 3;cols++)
+		for(int cols = 0; cols < 3; cols++)
 		{
-			printf("%d  ",r[rows][cols]);
+			printf("%d  ", r[rows][cols]);
 		}
 		printf("\n");
 	}
-
-		 
 	
 	return 0;
  } 

@@ -4,13 +4,13 @@ from matplotlib import pyplot as plt
 import cv2
 import math
 
-img = cv2.imread('C:/Users/henry/OneDrive/Programs/Program/Python/Image process/jennifer-lawrence-gray.jpg', 0)
+img = cv2.imread('Margot-Robbie.jpg', -1)
 
 def double_liner(input_signal, zoom_multiples):
-    input_row, input_colum = input_signal.shape[:2]
+    input_row, input_colum, input_rgb = input_signal.shape
     output_row = int(input_row * zoom_multiples)
     output_colum = int(input_colum * zoom_multiples)
-    output_signal = np.zeros((output_row, output_colum))
+    output_signal = np.zeros((output_row, output_colum, input_rgb))
 
     for i in range(output_row):
         for j in range(output_colum):
@@ -44,7 +44,7 @@ def double_liner(input_signal, zoom_multiples):
                 y1 = y4 - 1
                 y2 = y4 - 1
 
-            output_signal[i, j] = (1 - t) * (1 - u) * input_signal[x1, y1] \
+            output_signal[i, j, :] = (1 - t) * (1 - u) * input_signal[x1, y1] \
                 + (1 - t) * u * input_signal[x2, y2] + t * (1 - u) * input_signal[x3, y3] \
                 + t * u * input_signal[x4, y4]
 
@@ -62,3 +62,6 @@ for i in range(2):
 
 plt.tight_layout()
 plt.show()
+
+# print(img)
+# print(newImg)

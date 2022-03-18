@@ -4,29 +4,31 @@ from matplotlib import pyplot as plt
 import cv2
 import math
 
-img = cv2.imread('C:/Users/henry/OneDrive/Programs/Program/Python/Image process/jennifer-lawrence-gray.jpg', 0)
+img = cv2.imread('Margot-Robbie.jpg')
 
 def nearestinterpolation(img, scale):
-    srcH, srcW = img.shape
-    dstH, dstW = srcH * scale, srcW * scale
-    retImg = np.zeros([dstH, dstW], dtype = 'uint8')
+    srcH, srcW, srcD = img.shape
+    dstH, dstW= srcH * scale, srcW * scale
+    retImg = np.zeros([dstH, dstW, srcD], dtype = 'uint8')
 
     for i in range(dstH):
+        srcX = round((i) * (srcH / dstH))
+
         for j in range(dstW):
-            srcX = round((i) * (srcH / dstH))
             srcY = round((j) * (srcW / dstW))
 
-            if srcX >= srcW:
-                srcX = srcW - 1
+            if srcX >= srcH:
+                srcX = srcH - 1 
                 
-            if srcY >= srcH:
-                srcY = srcH - 1
+            if srcY >= srcW:
+                srcY = srcW - 1
 
-            retImg[i, j] = img[srcX, srcY]
+            retImg[i, j, :] = img[srcX, srcY, :]
 
     return retImg
 
-newImg = nearestinterpolation(img, 3)
+enlarge = int(input('Enter enlarge scale:'))
+newImg = nearestinterpolation(img, enlarge)
 print(img.shape)
 print(img)
 print(newImg.shape)

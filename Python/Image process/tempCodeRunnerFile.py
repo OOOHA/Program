@@ -1,1 +1,0 @@
-jennifer-lawrence-gray.jpg

@@ -26,3 +26,4 @@ cv2.imshow('gray',img_gray) #show image
 cv2.waitKey() #stop the Window
 cv2.destroyAllWindows() #kill the Window
 #cv2.imwrite('Margot-Robbie-gray.jpg',img_gray)
+print(img_gray.shape)
