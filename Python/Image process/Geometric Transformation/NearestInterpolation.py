@@ -1,10 +1,9 @@
-
 import numpy as np
 from matplotlib import pyplot as plt
 import cv2
 import math
 
-img = cv2.imread('Margot-Robbie.jpg')
+img = cv2.cvtColor(cv2.imread('Margot-Robbie.jpg'), cv2.COLOR_BGR2RGB)
 
 def nearestinterpolation(img, scale):
     srcH, srcW, srcD = img.shape
@@ -36,7 +35,7 @@ print(newImg)
 
 images = [img, newImg]
 titles = ['Original', 'nearest Interpolation']
-plt.figure(figsize = (15, 15))
+plt.figure(figsize = (10, 10))
 
 for i in range(2):
     plt.subplot(1, 2, i + 1), plt.imshow(images[i], 'gray')

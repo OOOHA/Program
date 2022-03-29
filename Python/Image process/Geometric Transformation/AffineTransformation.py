@@ -3,7 +3,7 @@ import cv2
 from matplotlib import pyplot as plt
 import math
 
-img = cv2.imread('jennifer-lawrence.jpg', cv2.IMREAD_UNCHANGED)
+img = cv2.cvtColor(cv2.imread('Margot-Robbie.jpg'), cv2.COLOR_BGR2RGB)
 
 scale = eval(input("Please enter scale:"))
 nr, nc = img.shape[:2]

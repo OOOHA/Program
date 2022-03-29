@@ -2,8 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt 
 import cv2
 
-img = cv2.imread("C:/Users/henry/OneDrive/Programs/Program/Python/Image process/jennifer-lawrence-gray.jpg", 0) #For my Windows
-#img = cv2.imread("/Users/henry/OneDrive/Programs/Program/Python/Image process/jennifer-lawrence-gray.jpg", 0) # For my mac
+img = cv2.imread("jennifer-lawrence-gray.jpg", 0)
 nr, nc = img.shape[:2]
 x0 = nr // 2
 y0 = nc // 2

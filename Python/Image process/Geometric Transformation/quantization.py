@@ -4,11 +4,10 @@ import cv2
 import time
 
 start = time.time()
-img = cv2.imread("C:/Users/henry/OneDrive/Programs/Program/Python/Image process/Margot-Robbie.jpg", -1)
-#img = cv2.imread("/Users/henry/OneDrive/Programs/Program/Python/Image process/Margot-Robbie.jpg", 0) # For my mac
+img = cv2.cvtColor(cv2.imread('Margot-Robbie.jpg'), cv2.COLOR_BGR2RGB)
 
 def image_quantization(img, bits):
-    nr, nc = img.shape[:2]
+    nr, nc, nd = img.shape
     retImg = img.copy()
     levels = 2 ** bits
     interval = 256 / levels

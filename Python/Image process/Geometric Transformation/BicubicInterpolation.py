@@ -3,6 +3,7 @@ import numpy as np
 import math
 import sys
 import time
+from matplotlib import pyplot as plt
   
   
 # Interpolation kernel
@@ -132,8 +133,22 @@ print('Completed!')
   
 # Saving the output image
 cv2.imwrite('bicubic.png', dst)
-bicubicImg = cv2.imread('bicubic.png')
-  
+#bicubicImg = cv2.imread('bicubic.png')
+# cv2.imshow('chess',dst) #show image
+# cv2.waitKey() #stop the Window
+# cv2.destroyAllWindows() #kill the Window
+# images = [img, dst]
+# titles = ['Original', 'Bicubic Interpolation']
+# plt.figure(figsize = (15, 15))
+
+# for i in range(2):
+#     plt.subplot(1, 2, i + 1), plt.imshow(images[i], 'gray')
+#     plt.title(titles[i], fontsize = 20, color = 'black')
+#     #plt.xticks([]), plt.yticks([]) # Do not display x,y
+
+# plt.tight_layout()
+# plt.show()
+
 # display shapes of both images
 print('Original Image Shape:', img.shape)
-print('Generated Bicubic Image Shape:', bicubicImg.shape)
+print('Generated Bicubic Image Shape:', dst.shape)
