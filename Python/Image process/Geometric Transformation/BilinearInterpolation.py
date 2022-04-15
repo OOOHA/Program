@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import cv2
 import math
 
-img = cv2.cvtColor(cv2.imread('Margot-Robbie.jpg'), cv2.COLOR_BGR2RGB)
+img = cv2.cvtColor(cv2.imread('Margot-Robbie.jpg'), cv2.COLOR_BGR2GRAY)
 
 def double_liner(input_signal, zoom_multiples):
     input_row, input_colum = input_signal.shape
