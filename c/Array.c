@@ -15,6 +15,7 @@ int main()
 		printf("%d\t",a[i]);
 	}
 	
+	printf("\n");
 	return 0;
 } 
 void *z(int *x, int c)
