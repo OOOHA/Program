@@ -1,16 +1,9 @@
-//載入輸入輸出
 #include<iostream>
-//使用名稱空間(記憶先分一塊位置出來做暫存用)
 using namespace std;
-/*自訂函數原型-寫在主程式上方
-資料型態 函數名稱(參數列);*/
-/*無回傳無參數*/ 
+ 
 void show1();
-/*無回傳有參數*/
 void show2(int,int);
-/*有回傳無參數*/ 
 int show3();
-/*有回傳有參數*/
 float show4(float,float,float);
 /*inline函數-提升程式呼叫函數執行效率,不能含有複雜的控制語句,
 如迴圈或switch等,所以只有較小且頻繁被呼叫的簡單函數才適用

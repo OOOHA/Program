@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 
-img = cv2.cvtColor(cv2.imread('hw6.jpg'), cv2.COLOR_BGR2RGB)
+img = cv2.cvtColor(cv2.imread('jennifer.jpg'), cv2.COLOR_BGR2RGB)
 
 newImg = cv2.bilateralFilter(img, 11, 50, 50)
 

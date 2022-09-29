@@ -17,10 +17,9 @@ int main()
         }
     } while (n != 5);
 
-    
     printf("Max is:%d\n" , max);
     sum = sum -1;
     printf("Entered numbers(Without 5):%d\n" , sum);
-    printf("average(Without 5):%.2f" ,(float)sum2 / (float)sum);
+    printf("average(Without 5):%.2f\n" ,(float)sum2 / (float)sum);
     return 0;
 }
