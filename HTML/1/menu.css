@@ -1,0 +1,9 @@
+.nav a{
+    text-decoration: none;
+    background-color: #04AA6D;
+    color: rgb(188, 226, 255);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+}
